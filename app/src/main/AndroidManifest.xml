@@ -17,8 +17,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".SubCategoryActivitiy" />
-        <activity android:name=".QuestionsPagerActivity"
-            android:theme="@style/TabTheme" />
     </application>
 
 </manifest>

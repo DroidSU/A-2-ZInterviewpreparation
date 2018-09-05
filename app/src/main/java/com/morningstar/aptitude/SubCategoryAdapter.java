@@ -8,7 +8,6 @@
 package com.morningstar.aptitude;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -55,8 +54,9 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
     private void StartQuestionsActivity(int pos) {
         switch (pos){
             case 0:
-                Intent questionsIntent = new Intent(context, QuestionsPagerActivity.class);
-                context.startActivity(questionsIntent);
+                //Intent questionsIntent = new Intent(context, QuestionsPagerActivity.class);
+                //context.startActivity(questionsIntent);
+                Toast.makeText(context, "Not set yet", Toast.LENGTH_SHORT).show();
                 break;
             default:
                 Toast.makeText(context, "Clicked on "+pos, Toast.LENGTH_SHORT).show();
