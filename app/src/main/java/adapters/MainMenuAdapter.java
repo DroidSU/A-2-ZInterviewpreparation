@@ -5,7 +5,7 @@
  * When you finally understand how this works, please do explain it to me too at sujoydatta26@gmail.com
  * P.S.: In case you are planning to use this without mentioning me, you will be met with mean judgemental looks and sarcastic comments.
  */
-package com.morningstar.aptitude;
+package adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -19,7 +19,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.morningstar.aptitude.R;
+
 import java.util.ArrayList;
+
+import activities.AptitudeCategoryActivity;
 
 public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.MyViewHolder> {
 
@@ -53,13 +57,20 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.MyView
     }
 
     private void StartNewActivity(int pos) {
-        if (item_names.get(pos).equals("About Us") || item_names.get(pos).equals("Rate Us")){
-            Toast.makeText(context, "Rate Us!", Toast.LENGTH_SHORT).show();
-        }
-        else {
-            Intent subcategoryIntent = new Intent(context, SubCategoryActivitiy.class);
-            subcategoryIntent.putExtra("category_name", item_names.get(pos));
-            context.startActivity(subcategoryIntent);
+        switch (pos) {
+            case 0:
+                Intent intent = new Intent(context, AptitudeCategoryActivity.class);
+                context.startActivity(intent);
+                break;
+            case 6:
+                Toast.makeText(context, "Rate Us!", Toast.LENGTH_SHORT).show();
+                break;
+            case 7:
+                Toast.makeText(context, "About Us!", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                Toast.makeText(context, "Not defined yet!", Toast.LENGTH_SHORT).show();
+                break;
         }
     }
 
@@ -73,6 +84,7 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.MyView
         private TextView textView;
         private ImageView imageView;
         private CardView cardView;
+
         public MyViewHolder(View view) {
             super(view);
             textView = view.findViewById(R.id.main_grid_text);

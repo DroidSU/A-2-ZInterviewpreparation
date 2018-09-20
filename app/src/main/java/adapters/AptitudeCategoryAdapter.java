@@ -5,9 +5,10 @@
  * When you finally understand how this works, please do explain it to me too at sujoydatta26@gmail.com
  * P.S.: In case you are planning to use this without mentioning me, you will be met with mean judgemental looks and sarcastic comments.
  */
-package com.morningstar.aptitude;
+package adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -18,15 +19,19 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.morningstar.aptitude.R;
+
 import java.util.ArrayList;
 
-public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.SubCategoryViewHolder> {
+import activities.MultipleChoiceQuestionsActivity;
+
+public class AptitudeCategoryAdapter extends RecyclerView.Adapter<AptitudeCategoryAdapter.SubCategoryViewHolder> {
 
     private ArrayList<String> title;
     private ArrayList<Integer> icon;
     private Context context;
 
-    public SubCategoryAdapter(ArrayList<String> title, ArrayList<Integer> icon, Context context) {
+    public AptitudeCategoryAdapter(ArrayList<String> title, ArrayList<Integer> icon, Context context) {
         this.title = title;
         this.icon = icon;
         this.context = context;
@@ -54,9 +59,8 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
     private void StartQuestionsActivity(int pos) {
         switch (pos){
             case 0:
-                //Intent questionsIntent = new Intent(context, QuestionsPagerActivity.class);
-                //context.startActivity(questionsIntent);
-                Toast.makeText(context, "Not set yet", Toast.LENGTH_SHORT).show();
+                Intent questionsIntent = new Intent(context, MultipleChoiceQuestionsActivity.class);
+                context.startActivity(questionsIntent);
                 break;
             default:
                 Toast.makeText(context, "Clicked on "+pos, Toast.LENGTH_SHORT).show();
