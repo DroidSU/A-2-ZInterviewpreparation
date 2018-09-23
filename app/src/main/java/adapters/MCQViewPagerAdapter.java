@@ -22,7 +22,16 @@ public class MCQViewPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return MCQItem.newInstance();
+        switch (position) {
+            case 0:
+                return new MCQItem(position);
+            case 1:
+                return new MCQItem(position);
+            case 2:
+                return new MCQItem(position);
+            default:
+                return new MCQItem(position);
+        }
     }
 
     @Override

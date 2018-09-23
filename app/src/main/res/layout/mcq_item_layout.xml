@@ -25,7 +25,7 @@
         android:textSize="22sp" />
 
     <android.support.v7.widget.CardView
-        android:id="@+id/mcqAnswerOne"
+        android:id="@+id/mcqCardViewOne"
         style="@style/MCQAnswerStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,6 +35,7 @@
         app:cardUseCompatPadding="false">
 
         <TextView
+            android:id="@+id/mcqAnswerOne"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Answer One"
@@ -44,16 +45,17 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:id="@+id/mcqAnswerTwo"
+        android:id="@+id/mcqCardViewTwo"
         style="@style/MCQAnswerStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/mcqAnswerOne"
+        android:layout_below="@+id/mcqCardViewOne"
         app:cardCornerRadius="10dp"
         app:cardElevation="3dp"
         app:cardUseCompatPadding="false">
 
         <TextView
+            android:id="@+id/mcqAnswerTwo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Answer two"
@@ -63,16 +65,17 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:id="@+id/mcqAnswerThree"
+        android:id="@+id/mcqCardViewThree"
         style="@style/MCQAnswerStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/mcqAnswerTwo"
+        android:layout_below="@+id/mcqCardViewTwo"
         app:cardCornerRadius="10dp"
         app:cardElevation="3dp"
         app:cardUseCompatPadding="false">
 
         <TextView
+            android:id="@+id/mcqAnswerThree"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Answer Three"
@@ -82,16 +85,17 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:id="@+id/mcqAnswerFour"
+        android:id="@+id/mcqCardViewFour"
         style="@style/MCQAnswerStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/mcqAnswerThree"
+        android:layout_below="@+id/mcqCardViewThree"
         app:cardCornerRadius="10dp"
         app:cardElevation="3dp"
         app:cardUseCompatPadding="false">
 
         <TextView
+            android:id="@+id/mcqAnswerFour"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Answer Four"
